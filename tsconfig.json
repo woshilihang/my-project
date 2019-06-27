@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "lib": ["dom", "es2015", "es2015.promise"],
+        "jsx": "react",
+        "sourceMap": true,
+        "strict": true,
+        "noImplicitAny": true, // 额外的检查 并不是所有函数里的代码都有返回值，抛出错误
+        "baseUrl": "src",
+        "paths": {
+            "@/*": ["./*"],
+        },
+        "esModuleInterop": true,
+    },
+    "include": [
+        "./src/**/*"
+    ]
+}
