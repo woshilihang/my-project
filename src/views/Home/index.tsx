@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface IHomePageState {
-  count: number
+  count
 }
 
 interface IHomePageProps {
