@@ -13,6 +13,12 @@ module.exports = {
     filename: "[name].bundle.js",
     sourceMapFilename: "[name].bundle.map.js"
   },
+  devServer: {
+    inline: true,
+    quiet: true,
+    contentBase: './',
+    port: 8088
+  },
   module: {
     rules: [
       {
