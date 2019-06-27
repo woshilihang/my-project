@@ -1,3 +1,3 @@
 # Project
 
-> about this prooject,  TS + React + Redux + PWA
+> about this project,  TS + React + Redux + PWA
