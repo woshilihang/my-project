@@ -59,5 +59,25 @@ revert 代码回退
 > 如果当前提交有针对特定的issue，那么在Footer部分填写需要关闭的的单个issue或者一系列issues
 
 ##### 参考
-介绍提交说明工具集[cz](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fcommitizen%2Fcz-cli)适配器、校验以及日志）的使用方法
+
+[介绍提交说明工具集cz适配器、校验以及日志）的使用方法](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fcommitizen%2Fcz-cli)
+
 [Cz工具集使用介绍 - 规范Git提交说明](https://juejin.im/post/5cc4694a6fb9a03238106eb9#heading-0)
+
+[Angular规范](https://link.juejin.im/?target=https%3A%2F%2Fdocs.google.com%2Fdocument%2Fd%2F1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y%2Fedit%23heading%3Dh.greljkmo14y0)
+
+[cz-cli - cz工具](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fcommitizen%2Fcz-cli)
+
+[cz-customizable - cz适配器](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fleonardoanalista%2Fcz-customizable)
+
+[@commitlint/config-conventional  - cz适配器](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fmarionebl%2Fcommitlint%2Ftree%2Fmaster%2F%40commitlint%2Fconfig-conventional)
+
+[commitlint - cz校验工具](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fmarionebl%2Fcommitlint)
+
+[commitlint-config-cz - cz校验工具的校验规则](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fwhizark%2Fcommitlint-config-cz)
+
+[validate-commit-msg - cz校验工具](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2FFrikki%2Fvalidate-commit-message)
+
+[conventional-changelog - cz日志生成器](https://link.juejin.im/?target=https%3A%2F%2Fgithub.com%2Fconventional-changelog%2Fconventional-changelog%2Ftree%2Fmaster%2Fpackages%2Fconventional-changelog)
+
+[commit_msg - git钩子文档](https://link.juejin.im/?target=https%3A%2F%2Fgit-scm.com%2Fdocs%2Fgithooks%23_commit_msg)
