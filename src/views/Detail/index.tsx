@@ -24,7 +24,7 @@ class HomeComponent extends React.Component<IHomePageProps, IHomePageState> {
   public render() {
     return (
       <div>
-        <button onClick={ this.handleIncrement }>Increment</button>
+        <button onClick={ this.handleIncrement }>Incremenasdasdasdst</button>
       </div>
     );
   }

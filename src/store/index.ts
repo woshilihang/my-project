@@ -1,6 +1,6 @@
 import {
   combineReducers,
-  createStore
+  createStore,
 } from 'redux';
 
 const rootReducer = combineReducers({

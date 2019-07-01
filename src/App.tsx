@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dispatch } from 'redux';
 import {
-    connect
+    connect,
 } from 'react-redux';
 import {
   HashRouter,
@@ -9,18 +9,18 @@ import {
 } from 'react-router-dom';
 
 // import pages com
-import Home from 'views/Home';
+import Home from './views/Home/index';
 
 import { AppState } from './store';
 
 import './App.sass';
 
 const addCount = () => ({
-  type: 'ADD_COUNT'
-})
+  type: 'ADD_COUNT',
+});
 
 interface IAppComponentProps {
-  addCount: () => void
+  addCount: () => void;
 }
 
 class AppComponent extends React.Component<IAppComponentProps, {}> {
@@ -35,13 +35,13 @@ class AppComponent extends React.Component<IAppComponentProps, {}> {
           <Route exact path='/' component={ Home }></Route>
         </HashRouter>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state: AppState) => {
   return state;
-}
+};
 
 const mapDispatchToProps = (dispatch: Dispatch) => ({
   addCount: () => dispatch(addCount()),

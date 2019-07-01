@@ -5,8 +5,8 @@ export function dataSync() {
   const syncData = {
     type: SYNC_DATA,
     payload: {
-      data: "this is syncData"
-    }
+      data: "this is syncData",
+    },
   };
   return syncData;
 }
@@ -16,8 +16,8 @@ export function dataAsync() {
     const asyncData = {
       type: ASYNC_DATA,
       payload: {
-        data: "this is asyncData"
-      }
+        data: "this is asyncData",
+      },
     };
     setTimeout(() => {
       dispatch(asyncData);

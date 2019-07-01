@@ -1,9 +1,10 @@
 {
   "extends": ["tslint:recommended", "tslint-react"],
   "rules": {
+    "no-trailing-whitespace": false,
     "jsx-alignment": true,
     "jsx-wrap-multiline": true,
-    "jsx-self-close": true,
+    "jsx-self-close": false,
     "jsx-space-before-trailing-slash": true,
     "jsx-curly-spacing": "always",
     "jsx-boolean-value": false,
@@ -12,6 +13,16 @@
     "ordered-imports": false,
     "no-implicit-dependencies": false,
     "no-submodule-imports": false,
-    "no-var-requires": false
+    "no-var-requires": false,
+    "no-var-keyword": true,
+    "quotemark": false,
+    "whitespace": [
+      true,
+      "check-branch"
+    ],
+    "comment-format": [
+      true,
+      "check-space"
+    ]
   }
 }
