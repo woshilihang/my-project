@@ -152,6 +152,74 @@ function getEntry() {
 // 本项目配置的HtmlWebpackPlugin配置模板统一放在src/tpl下
 
 // 多页面配置就很简单了，不在赘述，注意点就是在webpack配置多页面的时候注意chunks, filename, public等配置项
+
+```
+#### code Split代码分割
+
+* 入口起点，使用entry配置手动分离代码
+```
+module.exports = {
+    entry: {
+        app: './src/index.js',
+        print: './src/print.js'
+    },
+    // ...
+    output: {
+        filename: '[name].[chunkhash].js',
+        path: path.resolve(__dirname, './dist')
+    }
+}
+// 构建后
+app.f7badf83cc90de106d41.js
+print.e00bba994e917cc7fc59.js
+```
+* 动态导入
+> 使用ECMASCRIPT异步引入模块的方法import()
+```
+import _ from "lodash";
+
+function createDiv() {
+  let element = document.createElement("div");
+
+  element.innerHTML = _join(["hello", "world"], ",");
+
+  element.onclick = e =>
+    import(/* webpackChunkName: "print" */ "./print").then(Print => {});
+
+  return element;
+}
+
+document.body.appendChild(createDiv());
+
+output: {
+  chunkFilename: '[name].[chunkhash].js',
+}
+// output的chunkFileName决定非入口文件的名称，这里的chunk就是分割产生的，因此在上述设置的webpackChunkName就是这里的name
+```
+* 插件SplitChunkPlugin， webpack4内置，开箱即用
+```
+module.exports = {
+  //...
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendor',
+          chunks: 'initial', 把非动态模块打包进vendor，动态模块优化打包 /async	把动态模块打包进 vendor，非动态模块保持原样（不优化）/ all 把动态和非动态模块同时进行优化打包；所有模块都扔到 vendors.bundle.js 里面。
+          minChunks: 2, // 分割前必须共享模块的U最小数
+          filename: '[name].bundle.js', // 会覆盖output中配置的
+        }
+      }
+    }
+  },
+  output: {
+    filename: '[name].[chunkhash].js',
+    chunkFilename: '[name].[chunkhash].js',
+    path: path.resolve(__dirname, './dist')
+  }
+};
+
 ```
 
 ### webpack-merge来合并不同环境下的配置文件

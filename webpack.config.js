@@ -44,7 +44,7 @@ module.exports = {
   //   main: "./src/index.tsx"
   // },
   entry: getEntry(),
-  devtool: "source-map", // 开发工具，启动source-map
+  devtool: "cheap-module-source-map", // 开发工具，启动source-map
   output: {
     // 出口文件
     path: `${Root}/dist`, // 输出文件的绝对路径
@@ -63,7 +63,7 @@ module.exports = {
     overlay: true, // 出错代码是否显示在页面上
     hot: true, // 热加载
     compress: true, // 服务器资源采用gzip压缩
-    // historyApiFallback: true, // true默认打开HTML页面，false会出现一个目录，一会演示
+    historyApiFallback: true, // 该设置的作用，所有404都会连接到index.html
   },
   module: {
     // 模块相关配置
@@ -146,5 +146,7 @@ module.exports = {
     ...htmlPluginArray,
     new webpack.HotModuleReplacementPlugin(),
   ],
-  optimization: {}
+  optimization: {
+    minimize: false,
+  }
 };
