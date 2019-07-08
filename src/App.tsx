@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 
 // import pages com
-import Home from './views/Home/index';
+import Home from './Views/Home/index';
 
 import { AppState } from './store';
 

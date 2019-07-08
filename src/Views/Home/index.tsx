@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDom from 'react-dom';
+import React from '@/Views/Home/node_modules/react';
+import ReactDom from '@/Views/Home/node_modules/react-dom';
 
 export interface IHomePageState {
   count: number;
